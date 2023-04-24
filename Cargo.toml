@@ -1,0 +1,36 @@
+[package]
+name = "ark-msm"
+version = "0.3.0"
+authors = [
+    "Jiannan Ouyang <ouyang@snarkify.io>",
+    "Boyu Sun <boyu@snarkify.io>"
+]
+description = "A library for multi-scalar muliplication"
+homepage = "https://github.com/snarkify/ark-msm"
+repository = "https://github.com/snarkify/ark-msm"
+keywords = ["cryptography", "msm"]
+categories = ["cryptography"]
+license = "MIT/Apache-2.0"
+edition = "2021"
+rust-version = "1.63"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+
+[dependencies]
+ark-bls12-381 = {version = "0.3.0"}
+ark-ec = {version = "0.3.0"}
+ark-ff = {version = "0.3.0"}
+ark-std = {version = "0.3.0"}
+num-bigint = {version = "0.4.0"}
+
+[dev-dependencies]
+criterion = "0.3"
+
+[profile.test]
+opt-level = 3
+
+[[bench]]
+harness = false
+name = "bench_msm"
+
