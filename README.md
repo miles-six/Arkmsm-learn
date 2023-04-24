@@ -1,4 +1,7 @@
 <h1 align="center">ArkMSM</h1>
+自己在学习Arkmsm库中的优化算法，尝试将优化算法与代码对应起来，学习代码与理论。
+
+
 
 `arkmsm` is a Multi-Scalar Multiplication (MSM) module that incorporates
 state-of-the-art MSM optimizations into
